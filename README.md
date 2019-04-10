@@ -18,6 +18,10 @@ XCode 10.1,
 Swift 4.2,
 iOS 12.2
 
+<p align="center">
+  <img src="https://github.com/Aabasaheb/WeatherForecast/blob/master/Weather%20Screenshots/LandingPage.png"/>
+</p>
+
 ## Application Flow
 
 - Click on app icon to launch application.
