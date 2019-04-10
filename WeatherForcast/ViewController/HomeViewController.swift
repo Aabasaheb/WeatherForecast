@@ -261,6 +261,18 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UpdateWeatherCustomDelegate, CLLocationManagerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate {
     
+    //MARK:- UITextFieldDelegate Delegates
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
+        if datePickerBackgroundView.isHidden {
+            datePickerBackgroundView.isHidden = false
+            self.view.bringSubviewToFront(datePickerBackgroundView)
+        }
+        else {
+            datePickerBackgroundView.isHidden = true
+        }
+    }
+    
     //MARK:- CLLocationManager Delegates
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.locationManager.stopUpdatingLocation()
